@@ -53,9 +53,6 @@ async def on_message(message):
 	elif message.content.startswith(('Avant', 'avant')):
 		await message.channel.send("mai te")
 
-	if "gibus" in message.content.lower():
-		await message.channel.send("Gibus")
-
 	if message.content.lower() == "stp yann":
 		fileName = random.choice(os.listdir("./babies"))
 		with open("./babies/" + fileName, 'rb') as openedFile:
