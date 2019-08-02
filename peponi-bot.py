@@ -75,6 +75,9 @@ async def on_message(message):
 		with open("./assets/chef_martin.jpg", 'rb') as chefMartinImg:
 			await message.channel.send("c'est chaud", file=discord.File(chefMartinImg))
 
+	if "gibus" in message.content.lower():
+		await message.channel.send("Gibus")
+
 	if message.content.endswith(("inge", "inges")):
 		await message.channel.send("qui fait de la moto")
 
