@@ -19,7 +19,7 @@ class Reactions:
 			return "Done"
 
 
-TOKEN = "NjA0MzQxNDc1MTEwNTUxNTYy.XT9dvw.brBhXXrU2x-32T56OE1g6Qq8f1g"
+TOKEN = "NjA0MzQxNDc1MTEwNTUxNTYy.XURCCg.Q9w5wXUP4bVfs0D64W8ulKRdmog"
 
 with open("./members.json") as json_file:
 	data = json.load(json_file)
@@ -54,7 +54,7 @@ async def on_message(message):
 	elif message.author.id == 192366356803485696 or message.author.name == "Blade" or message.author.name == "Pepito":
 		if reactions.members['baptou']:
 			await message.add_reaction("🤓")
-		if message.content.upper() == message.content:
+		if message.content.isupper():
 			with open("./assets/calme_stp.jpg", 'rb') as calmeStpImg:
 				await message.channel.send("", file=discord.File(calmeStpImg))
 	#petite camille
@@ -75,7 +75,7 @@ async def on_message(message):
 		with open("./assets/chef_martin.jpg", 'rb') as chefMartinImg:
 			await message.channel.send("c'est chaud", file=discord.File(chefMartinImg))
 
-	if message.content.endswith("inge"):
+	if message.content.endswith(("inge", "inges")):
 		await message.channel.send("qui fait de la moto")
 
 	if message.content.startswith("stp"):
