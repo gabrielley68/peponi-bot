@@ -78,8 +78,10 @@ async def on_message(message):
 	if "gibus" in message.content.lower():
 		await message.channel.send("Gibus")
 
-	if message.content.endswith(("inge", "inges")):
+	if message.content.endswith(("inge", "inje, inj")):
 		await message.channel.send("qui fait de la moto")
+	elif message.content.endswith(("inges", "injes")):
+		await message.channel.send("qui font de la moto")
 
 	if message.content.startswith("stp"):
 
